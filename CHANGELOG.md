@@ -1,11 +1,16 @@
 # Changelog
 
+# TODO
+- fix bug: add table + not working
+- history
+- make it working with spring boot api 
 # 01 January 2017
 - Migrate to angular 2.4
 - Fix all dependecies
 - Fix bugs
 - Change Services
  
+
 # 04 October 2016
 
 - Migrate to webpack 2
