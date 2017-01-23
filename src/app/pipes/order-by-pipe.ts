@@ -4,18 +4,14 @@ import {Pipe, PipeTransform} from '@angular/core';
 export class OrderByPipe implements PipeTransform {
 
   static _orderByComparator(a:any, b:any):number {
-    console.log("# a", a, "b", b);
     if (Date.parse(a)) {
-      console.log("date a", new Date(a).getTime(), "b", new Date(b).getTime(), new Date(a).getTime() < new Date(b).getTime());
       if (new Date(a).getTime() < new Date(b).getTime()) return -1;
       if (new Date(a).getTime() > new Date(b).getTime()) return 1;
     } else if ((isNaN(parseFloat(a)) || !isFinite(a)) || (isNaN(parseFloat(b)) || !isFinite(b))){
-      console.log(">> a", a, "b", b);
       //Isn't a number so lowercase the string to properly compare
       if(a.toLowerCase() < b.toLowerCase()) return -1;
       if(a.toLowerCase() > b.toLowerCase()) return 1;
     } else {
-      console.log("<< a", a, "b", b, (typeof a));
       //Parse strings as numbers to compare properly
       if(parseFloat(a) < parseFloat(b)) return -1;
       if(parseFloat(a) > parseFloat(b)) return 1;
