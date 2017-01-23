@@ -17,7 +17,7 @@ export class OrderHistoryComponent implements OnInit {
   }
 
   requestOrders(): void {
-    this.rest.getOrders().then(o => {this.orders = o; console.log(o)});
+    this.rest.getOrders().then(orders => {this.orders = orders;});
   }
   public constructor(private rest: RestaurantService) {}
 }

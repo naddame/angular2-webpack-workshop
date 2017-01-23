@@ -38,7 +38,7 @@
           "price": 30
         }
       ],
-      "comments": "Matoub",
+      "comments": "Matoub coco",
       "id": 1
     },
     {
@@ -100,7 +100,18 @@
       "diners": 1,
       "paid": false,
       "total": 0,
-      "items": [],
+      "items": [
+        {
+          "itemId": "294",
+          "label": "Salad",
+          "price": 35
+        },
+        {
+          "itemId": "528",
+          "label": "Desert",
+          "price": 12
+        }
+      ],
       "id": 5
     }
   ]

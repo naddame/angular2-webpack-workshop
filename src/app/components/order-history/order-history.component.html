@@ -6,6 +6,7 @@
 
           <thead>
           <tr>
+            <th>id</th>
             <th>#</th>
             <th>opened</th>
             <th>diners</th>
@@ -15,22 +16,14 @@
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>1</td>
-            <td>12:30</td>
-            <td>4</td>
-            <td>250</td>
-            <td>13:30</td>
-            <td>leave without saying hello</td>
-          </tr>
-
-          <tr>
-            <td>1</td>
-            <td>12:30</td>
-            <td>4</td>
-            <td>250</td>
-            <td>13:30</td>
-            <td>leave without saying hello</td>
+          <tr *ngFor="let order of (orders | orderBy: ['-created'])">
+            <td>{{ order.id }}</td>
+            <td>{{ order.orderId }}</td>
+            <td>{{ order.created | date:'short' }}</td>
+            <td>{{ order.diners }}</td>
+            <td>{{ order.total }}</td>
+            <td>{{ order.closed | date:'short' }}</td>
+            <td>{{ order.comments}}</td>
           </tr>
 
           </tbody>
